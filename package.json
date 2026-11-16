@@ -1,0 +1,9 @@
+{
+  "name": "osmanli-pazarlama-paneli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Osmanlı Yatırım pazarlama raporları paneli",
+  "dependencies": {
+    "@netlify/blobs": "^10.7.13"
+  }
+}

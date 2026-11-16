@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pazarlama Paneli · Osmanlı Yatırım</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f2a4a'/><path d='M8 22V12m6 10V8m6 14v-7m6 7V10' stroke='%23e8c46a' stroke-width='3' stroke-linecap='round'/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <div class="brand-title">Pazarlama Paneli</div>
+        <div class="brand-sub">Osmanlı Yatırım · dijital reklam raporları</div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="overview">Genel Bakış</button>
+      <button class="tab" data-tab="campaigns">Kampanyalar</button>
+      <button class="tab" data-tab="category">Kategori Maliyeti</button>
+      <button class="tab" data-tab="upload">Veri Yükle</button>
+      <button class="tab" data-tab="manage">Veri Yönetimi</button>
+    </nav>
+  </header>
+
+  <section class="filters" id="filters">
+    <div class="seg" role="group" aria-label="Görünüm">
+      <button data-gran="month" class="active">Ay</button>
+      <button data-gran="quarter">Çeyrek</button>
+    </div>
+    <label>Dönem <select id="f-period"></select></label>
+    <label>Platform <select id="f-platform"><option value="">Tümü</option></select></label>
+    <label>Hesap <select id="f-account"><option value="">Tümü</option></select></label>
+    <label>Kırılım <select id="f-segment"><option value="">Tümü</option></select></label>
+    <span class="filters-note" id="f-note"></span>
+  </section>
+
+  <main>
+    <section class="view active" id="view-overview"></section>
+    <section class="view" id="view-campaigns"></section>
+    <section class="view" id="view-category"></section>
+    <section class="view" id="view-upload"></section>
+    <section class="view" id="view-manage"></section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-back" id="keymodal" hidden>
+    <form class="modal" id="keyform">
+      <h3>Erişim anahtarı</h3>
+      <p>Bu panel anahtarla korunuyor. Anahtarı bir kez girmeniz yeterli, bu tarayıcıda hatırlanır.</p>
+      <input type="password" id="keyinput" autocomplete="current-password" required>
+      <button class="btn primary" type="submit">Giriş</button>
+    </form>
+  </div>
+
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="parsers.js"></script>
+  <script src="calc.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
